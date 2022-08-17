@@ -1,6 +1,16 @@
-# DummyStackoverflow
+# AngularDummyStackoverflow
+
+###Web app with Angular that you can ask/answer questions and vote for given answers as in Stackoverflow
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+
+## Installing Packages
+
+Run `npm install` for installing node modules.
+
+## Json server
+
+Run `json-server --watch api/db.json` for a json server on `http://localhost:3000/`.
 
 ## Development server
 
