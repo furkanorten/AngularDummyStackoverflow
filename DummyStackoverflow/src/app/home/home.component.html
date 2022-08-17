@@ -1,0 +1,13 @@
+<div class="container d-flex flex-column align-items-center mt-5">
+  <mat-form-field class="w-75" appearance="fill">
+    <textarea [(ngModel)]="question" matInput cdkTextareaAutosize cdkAutosizeMinRows="5"
+      placeholder="Ask your question..."></textarea>
+  </mat-form-field>
+  <button (click)="post()" [disabled]="question.trim() == ''" mat-raised-button class="mb-5" color="warn">Ask</button>
+  <mat-card class="d-flex flex-column mb-2 border w-75" [routerLink]="'/show-solutions/'+ question.id" *ngFor="let question of questionList">
+    <mat-card-title>User: {{question.username}}</mat-card-title>
+    <mat-card-content class="mt-2">
+      <h3>Question: {{question.question}}</h3>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "email": "furkan@mail.com",
+      "username": "furkanorten",
+      "password": "pass1234",
+      "id": 1
+    }
+  ],
+  "questions": [
+    {
+      "username": "furkanorten",
+      "question": "Is Angular easy to learn?",
+      "solutions": [
+        {
+          "username": "furkanorten",
+          "solution": "answer",
+          "plus": [
+            1
+          ],
+          "minus": []
+        },
+        {
+          "username": "furkanorten",
+          "solution": "new answer for this question",
+          "plus": [],
+          "minus": [
+            1
+          ]
+        },
+        {
+          "username": "furkanorten",
+          "solution": "jghsakjsas",
+          "plus": [],
+          "minus": [
+            1
+          ]
+        },
+        {
+          "username": "furkanorten",
+          "solution": "sakhdjldsaşkads",
+          "plus": [],
+          "minus": [
+            1
+          ]
+        }
+      ],
+      "id": 1
+    }
+  ]
+}
