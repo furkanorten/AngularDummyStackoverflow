@@ -1,6 +1,6 @@
 # AngularDummyStackoverflow
 
-###Web app with Angular that you can ask/answer questions and vote for given answers as in Stackoverflow
+### Web app with Angular that you can ask/answer questions and vote for given answers as in Stackoverflow
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
