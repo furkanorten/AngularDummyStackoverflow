@@ -1,0 +1,43 @@
+<div *ngIf="questionObj != undefined"  class="container d-flex flex-column align-items-center mt-5">
+  <h1>You can answer this question</h1>
+  <mat-card class="d-flex flex-row mb-2 border w-75">
+    <div class="container d-flex flex-column mt-4 ms-2">
+      <mat-card-title>User: {{questionObj.username}}</mat-card-title>
+      <mat-card-content class="mt-2">
+        <h3>Question: {{questionObj.question}}</h3>
+      </mat-card-content>
+    </div>
+  </mat-card>
+  <h1 class="mt-5">Answers</h1>
+  <mat-card class="d-flex flex-column mb-2 border w-75" *ngFor="let solution of questionObj.solutions; let i=index">
+    <div class="row">
+      <div class="col-md-1">
+        <div class="container d-flex flex-column">
+          <button (click)="vote(i, 1)" [class.colored-icon]="solution.plus.indexOf(userService.user.id)>=0" mat-icon-button>  <!-- if button is clicked, color it -->
+            <mat-icon>expand_less</mat-icon>
+          </button>
+          <span class="ms-3">{{solution.plus.length - solution.minus.length}}</span>
+          <button [class.colored-icon]="solution.minus.indexOf(userService.user.id)>=0" mat-icon-button> <!-- if button is clicked, color it -->
+            <mat-icon (click)="vote(i, -1)">expand_more</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="col-md-11">
+        <div class="container d-flex flex-column mt-4">
+          <mat-card-title>User: {{solution.username}}</mat-card-title>
+          <mat-card-content class="mt-2">
+            <h3>Answer: {{solution.solution}}</h3>
+          </mat-card-content>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+  <mat-form-field class="w-75 mt-3" appearance="fill">
+    <textarea [(ngModel)]="solutionText" matInput cdkTextareaAutosize cdkAutosizeMinRows="5"
+      placeholder="Give your answer..."></textarea>
+  </mat-form-field>
+  <div class="container d-flex justify-content-center">
+    <button (click)="returnBack()" mat-raised-button class="me-3" color="primary">Back</button>
+    <button (click)="answer()" [disabled]="solutionText.trim() == ''" mat-raised-button color="warn">Answer</button>
+  </div>
+</div>

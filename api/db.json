@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "email": "zeynep@mail.com",
+      "username": "zeynepkoker",
+      "password": "zeynepfurkan",
+      "id": 1
+    },
+    {
+      "email": "furkan@mail.com",
+      "username": "furkanorten",
+      "password": "furkanzeynep",
+      "id": 2
+    }
+  ],
+  "questions": [
+    {
+      "username": "zeynepkoker",
+      "question": "Nasılsın",
+      "solutions": [
+        {
+          "username": "furkanorten",
+          "solution": "İyiyim şağol canim",
+          "plus": [
+            2
+          ],
+          "minus": [
+            1
+          ]
+        },
+        {
+          "username": "zeynepkoker",
+          "solution": "bana neden sormadın nasıl olduğumu ",
+          "plus": [],
+          "minus": []
+        }
+      ],
+      "id": 1
+    }
+  ]
+}
